@@ -33,6 +33,16 @@
     <script>
         "use strict";
 
+        /**
+         * Функция разбивает число на сотни, десятки и единицы и 
+         * возвращает объект с уже разбитыми сотнями, десятками и
+         * единицами
+         * @param {number} number, целое число которое будет разбиваться 
+         * оно должно быть в диапазоне от 0 до 1000 не включительно
+         * @returns {object} - разбитый объект или пустой объект,
+         * если переданное число соответствует условию:
+         * number < 0 || number > 1000 || !Number.isInteger(number)
+         */
         function getDigitsOfNumber(number) {
             if (number < 0 || number > 1000 || !Number.isInteger(number)) {
                 return 'Incorrect value!!! ' + {};
